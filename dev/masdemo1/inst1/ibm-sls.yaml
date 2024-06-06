@@ -1,0 +1,60 @@
+merge-key: "dev/masdemo1/inst1"
+
+ibm_sls:
+  sls_channel: 3.x
+  sls_entitlement_file: <path:arn:aws:secretsmanager:us-east-1:435377327995:secret:dev/masdemo1/inst1/license#license_file>
+  ibm_entitlement_key: <path:arn:aws:secretsmanager:us-east-1:435377327995:secret:dev/masdemo1/ibm_entitlement#image_pull_secret_b64>
+
+  # aws docdb
+  mongodb_provider: "aws"
+  user_action: "add"
+  docdb_host: "<path:arn:aws:secretsmanager:us-east-1:435377327995:secret:dev/masdemo1/mongo#docdb_host>"
+  docdb_port: "<path:arn:aws:secretsmanager:us-east-1:435377327995:secret:dev/masdemo1/mongo#docdb_port>"
+  docdb_master_username: "<path:arn:aws:secretsmanager:us-east-1:435377327995:secret:dev/masdemo1/mongo#username>"
+  docdb_master_password: "<path:arn:aws:secretsmanager:us-east-1:435377327995:secret:dev/masdemo1/mongo#password>"
+  docdb_master_info: "<path:arn:aws:secretsmanager:us-east-1:435377327995:secret:dev/masdemo1/mongo#info>"
+  sls_mongo_username: "<path:arn:aws:secretsmanager:us-east-1:435377327995:secret:dev/masdemo1/inst1/mongo#username>"
+  sls_mongo_password: "<path:arn:aws:secretsmanager:us-east-1:435377327995:secret:dev/masdemo1/inst1/mongo#password>"
+
+  sls_mongo_secret_name: sls-mongo-credentials
+  icr_cp_open: icr.io/cpopen
+  run_sync_hooks: true
+  mongo_spec:
+    authMechanism: DEFAULT
+    configDb: admin
+    secretName: sls-mongo-credentials
+    retryWrites: false
+    nodes:
+      - host: docdb-masdemo1-1.cvwxreialrtj.us-east-1.docdb.amazonaws.com
+        port: 27017
+      - host: docdb-masdemo1-2.cvwxreialrtj.us-east-1.docdb.amazonaws.com
+        port: 27017
+      - host: docdb-masdemo1-3.cvwxreialrtj.us-east-1.docdb.amazonaws.com
+        port: 27017
+    certificates:
+      - alias: g1root
+        crt: |
+          -----BEGIN CERTIFICATE-----
+          MIID/zCCAuegAwIBAgIRAPVSMfFitmM5PhmbaOFoGfUwDQYJKoZIhvcNAQELBQAw
+          gZcxCzAJBgNVBAYTAlVTMSIwIAYDVQQKDBlBbWF6b24gV2ViIFNlcnZpY2VzLCBJ
+          bmMuMRMwEQYDVQQLDApBbWF6b24gUkRTMQswCQYDVQQIDAJXQTEwMC4GA1UEAwwn
+          QW1hem9uIFJEUyB1cy1lYXN0LTEgUm9vdCBDQSBSU0EyMDQ4IEcxMRAwDgYDVQQH
+          DAdTZWF0dGxlMCAXDTIxMDUyNTIyMzQ1N1oYDzIwNjEwNTI1MjMzNDU3WjCBlzEL
+          MAkGA1UEBhMCVVMxIjAgBgNVBAoMGUFtYXpvbiBXZWIgU2VydmljZXMsIEluYy4x
+          EzARBgNVBAsMCkFtYXpvbiBSRFMxCzAJBgNVBAgMAldBMTAwLgYDVQQDDCdBbWF6
+          b24gUkRTIHVzLWVhc3QtMSBSb290IENBIFJTQTIwNDggRzExEDAOBgNVBAcMB1Nl
+          YXR0bGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDu9H7TBeGoDzMr
+          dxN6H8COntJX4IR6dbyhnj5qMD4xl/IWvp50lt0VpmMd+z2PNZzx8RazeGC5IniV
+          5nrLg0AKWRQ2A/lGGXbUrGXCSe09brMQCxWBSIYe1WZZ1iU1IJ/6Bp4D2YEHpXrW
+          bPkOq5x3YPcsoitgm1Xh8ygz6vb7PsvJvPbvRMnkDg5IqEThapPjmKb8ZJWyEFEE
+          QRrkCIRueB1EqQtJw0fvP4PKDlCJAKBEs/y049FoOqYpT3pRy0WKqPhWve+hScMd
+          6obq8kxTFy1IHACjHc51nrGII5Bt76/MpTWhnJIJrCnq1/Uc3Qs8IVeb+sLaFC8K
+          DI69Sw6bAgMBAAGjQjBAMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFE7PCopt
+          lyOgtXX0Y1lObBUxuKaCMA4GA1UdDwEB/wQEAwIBhjANBgkqhkiG9w0BAQsFAAOC
+          AQEAFj+bX8gLmMNefr5jRJfHjrL3iuZCjf7YEZgn89pS4z8408mjj9z6Q5D1H7yS
+          jNETVV8QaJip1qyhh5gRzRaArgGAYvi2/r0zPsy+Tgf7v1KGL5Lh8NT8iCEGGXwF
+          g3Ir+Nl3e+9XUp0eyyzBIjHtjLBm6yy8rGk9p6OtFDQnKF5OxwbAgip42CD75r/q
+          p421maEDDvvRFR4D+99JZxgAYDBGqRRceUoe16qDzbMvlz0A9paCZFclxeftAxv6
+          QlR5rItMz/XdzpBJUpYhdzM0gCzAzdQuVO5tjJxmXhkSMcDP+8Q+Uv6FA9k2VpUV
+          E/O5jgpqUJJ2Hc/5rs9VkAPXeA==
+          -----END CERTIFICATE-----
