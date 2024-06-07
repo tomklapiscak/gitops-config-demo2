@@ -1,0 +1,4 @@
+merge-key: "dev/masdemo1/inst1"
+ibm_mas_workspaces:
+  - mas_workspace_id: inst1ws1
+    mas_workspace_name: Instance 1 Workspace 1
