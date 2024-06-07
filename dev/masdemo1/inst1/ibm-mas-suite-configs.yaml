@@ -1,5 +1,83 @@
 merge-key: "dev/masdemo1/inst1"
 ibm_mas_suite_configs:
+  - mas_config_name: "inst1-bas-system"
+    mas_config_chart: ibm-mas-bas-config
+    mas_config_scope: system
+    mas_workspace_id: inst1ws1
+    mas_application_id:
+    mas_config_kind: "bascfgs"
+    mas_config_api_version: "config.mas.ibm.com"
+    use_postdelete_hooks: true
+    dro_api_token: <path:arn:aws:secretsmanager:us-east-1:435377327995:secret:dev/masdemo1/dro#dro_api_token>
+    dro_endpoint_url: <path:arn:aws:secretsmanager:us-east-1:435377327995:secret:dev/masdemo1/dro#dro_url>
+    dro_contact:
+      email: user@example.com
+      first_name: Joe
+      last_name: Blogs
+    dro_ca:
+      crt: |
+        -----BEGIN CERTIFICATE-----
+        MIIFcjCCBFqgAwIBAgISA3+z9Ln24dKs2tDxyXTmmTjhMA0GCSqGSIb3DQEBCwUA
+        MDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQD
+        EwJSMzAeFw0yNDA2MDYwOTUzNDNaFw0yNDA5MDQwOTUzNDJaMDExLzAtBgNVBAMT
+        JmFwaS5tYXNkZW1vMS42NTR4LnAxLm9wZW5zaGlmdGFwcHMuY29tMIIBIjANBgkq
+        hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2ugVLy+LgYRm5I7iPNCF5FXIFqJSPKg/
+        tTlLiLZg4Ck7SF2tCkWKrHCjGhL4eqSG624gXf8l3p5ZWi9bxqaVsoRWmp1vgyKe
+        j8WKpmaigBy8q8VGAXLe99v8+MdwRteJn77oAoXu7EC6NgTkxUnlcQbPpwy4Yhkm
+        ZKbjIAgP7N5pN/VFG4Fd+o8Xn2gk+5hB8y+qb1s0eAS+OOlJXoaE+GofL+hjjDdu
+        MHKMYKxhySOPs217hA5WYW8xvYx+L6wjK5/e9tMAaz6nKTp5zthsUF7InMzoCGmR
+        ib1JZoYD8uKvlI88w9BubsAE/wH8cqjwwxfg22+z4wqQVJqSKGntHwIDAQABo4IC
+        gTCCAn0wDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEF
+        BQcDAjAMBgNVHRMBAf8EAjAAMB0GA1UdDgQWBBS7h5qKsB0PCFiBFiyS7Oi2zRG2
+        rDAfBgNVHSMEGDAWgBQULrMXt1hWy65QCUDmH6+dixTCxjBVBggrBgEFBQcBAQRJ
+        MEcwIQYIKwYBBQUHMAGGFWh0dHA6Ly9yMy5vLmxlbmNyLm9yZzAiBggrBgEFBQcw
+        AoYWaHR0cDovL3IzLmkubGVuY3Iub3JnLzCBiAYDVR0RBIGAMH6CKSouYXBwcy5t
+        YXNkZW1vMS42NTR4LnAxLm9wZW5zaGlmdGFwcHMuY29tgiZhcGkubWFzZGVtbzEu
+        NjU0eC5wMS5vcGVuc2hpZnRhcHBzLmNvbYIpcmgtYXBpLm1hc2RlbW8xLjY1NHgu
+        cDEub3BlbnNoaWZ0YXBwcy5jb20wEwYDVR0gBAwwCjAIBgZngQwBAgEwggEFBgor
+        BgEEAdZ5AgQCBIH2BIHzAPEAdwA/F0tP1yJHWJQdZRyEvg0S7ZA3fx+FauvBvyiF
+        7PhkbgAAAY/tLuE3AAAEAwBIMEYCIQCuLrFLAGSryyTyfSecB31YN/3QOppWYxFc
+        2hkyMMA68QIhAOA3bgxPUXva4nO75XMnKkzPffKTZQrPE8r8pOBbQXrCAHYAdv+I
+        Pwq2+5VRwmHM9Ye6NLSkzbsp3GhCCp/mZ0xaOnQAAAGP7S7hVgAABAMARzBFAiAO
+        OBEJjt1w1V5W/ZBg3ZcekkgB06dWhUR9N1wDwWK42wIhAL1hayrWsDcWV6kNLYVc
+        b+UMtHwmFG7smUhCtA5puiF6MA0GCSqGSIb3DQEBCwUAA4IBAQCtVZlaV62SrPEp
+        mG+4VQR8cU0c7q9nFZv1Wwqfn5Yt35te83wkNaEqT0wpcoHi0a3YOe2AR7S11c+f
+        haeujcjfZTRt5qTTnYOU75HugU+f0Apzu2rqBeeF4wqRDt3CtlQasd8wDR+GP3mU
+        kk76PewRgcUSDpmAiETKP1OO1D2MNTRu0sac6dCxnWJ864IC9DaPSPaE/nP21hHo
+        3tfgQJ/YPHXTKroy9tffN+2iQ009meW5e1ButVxKjYSTVH/xzfQrJYwu67R/5eTo
+        glUKeJvArDGYTU4z/DaEIFtZuQVaZPSPR8SjkgrpKY1Sv8pVj+LwE77sFrp0esPt
+        /0Ma+cTr
+        -----END CERTIFICATE-----
+        -----BEGIN CERTIFICATE-----
+        MIIFFjCCAv6gAwIBAgIRAJErCErPDBinU/bWLiWnX1owDQYJKoZIhvcNAQELBQAw
+        TzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh
+        cmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMjAwOTA0MDAwMDAw
+        WhcNMjUwOTE1MTYwMDAwWjAyMQswCQYDVQQGEwJVUzEWMBQGA1UEChMNTGV0J3Mg
+        RW5jcnlwdDELMAkGA1UEAxMCUjMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+        AoIBAQC7AhUozPaglNMPEuyNVZLD+ILxmaZ6QoinXSaqtSu5xUyxr45r+XXIo9cP
+        R5QUVTVXjJ6oojkZ9YI8QqlObvU7wy7bjcCwXPNZOOftz2nwWgsbvsCUJCWH+jdx
+        sxPnHKzhm+/b5DtFUkWWqcFTzjTIUu61ru2P3mBw4qVUq7ZtDpelQDRrK9O8Zutm
+        NHz6a4uPVymZ+DAXXbpyb/uBxa3Shlg9F8fnCbvxK/eG3MHacV3URuPMrSXBiLxg
+        Z3Vms/EY96Jc5lP/Ooi2R6X/ExjqmAl3P51T+c8B5fWmcBcUr2Ok/5mzk53cU6cG
+        /kiFHaFpriV1uxPMUgP17VGhi9sVAgMBAAGjggEIMIIBBDAOBgNVHQ8BAf8EBAMC
+        AYYwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMBIGA1UdEwEB/wQIMAYB
+        Af8CAQAwHQYDVR0OBBYEFBQusxe3WFbLrlAJQOYfr52LFMLGMB8GA1UdIwQYMBaA
+        FHm0WeZ7tuXkAXOACIjIGlj26ZtuMDIGCCsGAQUFBwEBBCYwJDAiBggrBgEFBQcw
+        AoYWaHR0cDovL3gxLmkubGVuY3Iub3JnLzAnBgNVHR8EIDAeMBygGqAYhhZodHRw
+        Oi8veDEuYy5sZW5jci5vcmcvMCIGA1UdIAQbMBkwCAYGZ4EMAQIBMA0GCysGAQQB
+        gt8TAQEBMA0GCSqGSIb3DQEBCwUAA4ICAQCFyk5HPqP3hUSFvNVneLKYY611TR6W
+        PTNlclQtgaDqw+34IL9fzLdwALduO/ZelN7kIJ+m74uyA+eitRY8kc607TkC53wl
+        ikfmZW4/RvTZ8M6UK+5UzhK8jCdLuMGYL6KvzXGRSgi3yLgjewQtCPkIVz6D2QQz
+        CkcheAmCJ8MqyJu5zlzyZMjAvnnAT45tRAxekrsu94sQ4egdRCnbWSDtY7kh+BIm
+        lJNXoB1lBMEKIq4QDUOXoRgffuDghje1WrG9ML+Hbisq/yFOGwXD9RiX8F6sw6W4
+        avAuvDszue5L3sz85K+EC4Y/wFVDNvZo4TYXao6Z0f+lQKc0t8DQYzk1OXVu8rp2
+        yJMC6alLbBfODALZvYH7n7do1AZls4I9d1P4jnkDrQoxB3UqQ9hVl3LEKQ73xF1O
+        yK5GhDDX8oVfGKF5u+decIsH4YaTw7mP3GFxJSqv3+0lUFJoi5Lc5da149p90Ids
+        hCExroL1+7mryIkXPeFM5TgO9r0rvZaBFOvV2z0gp35Z0+L4WPlbuEjN/lxPFin+
+        HlUjr8gRsI3qfJOQFy/9rKIJR0Y/8Omwt/8oTWgy1mdeHmmjk7j1nYsvC9JSQ6Zv
+        MldlTTKB3zhThV1+XWYp6rjd5JW1zbVWEkLNxE7GJThEUG3szgBVGP7pSWTUTsqX
+        nLRbwHOoq7hHwg==
+        -----END CERTIFICATE-----
   - mas_config_name: "inst1-mongo-system"
     mas_config_chart: ibm-mas-mongo-config
     mas_config_scope: system
