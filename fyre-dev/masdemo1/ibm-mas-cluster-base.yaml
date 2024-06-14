@@ -1,0 +1,20 @@
+merge-key: "fyre-dev/masdemo1"
+
+account:
+  id: fyre-dev
+
+region:
+  id: us-east-1
+
+cluster:
+  id: masdemo1
+  url: https://kubernetes.default.svc
+
+sm:
+  aws_access_key_id: "<path:arn:aws:secretsmanager:us-east-1:435377327995:secret:fyre-dev/masdemo1/aws#sm_aws_access_key_id>"
+  aws_secret_access_key: "<path:arn:aws:secretsmanager:us-east-1:435377327995:secret:fyre-dev/masdemo1/aws#sm_aws_secret_access_key>"
+
+notifications:
+  slack_channel_id: 
+
+
