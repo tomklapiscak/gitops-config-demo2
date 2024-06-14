@@ -1,0 +1,7 @@
+merge-key: "fyre-dev/masdemo1"
+
+ibm_dro:
+    dro_namespace: redhat-marketplace
+    ibm_entitlement_key: "<path:arn:aws:secretsmanager:us-east-1:435377327995:secret:fyre-dev/masdemo1/ibm_entitlement#entitlement_key>"
+    run_sync_hooks: true
+    dro_cmm_setup: 
