@@ -1,5 +1,40 @@
 merge-key: "fyre-dev/masdemo1/inst1"
 ibm_mas_suite_configs:
+  - mas_config_name: "inst1-bas-system"
+    mas_config_chart: ibm-mas-bas-config
+    mas_config_scope: system
+    mas_workspace_id: inst1ws1
+    mas_application_id:
+    mas_config_kind: "bascfgs"
+    mas_config_api_version: "config.mas.ibm.com"
+    use_postdelete_hooks: true
+    dro_api_token: <path:arn:aws:secretsmanager:us-east-1:435377327995:secret:fyre-dev/masdemo1/dro#dro_api_token>
+    dro_endpoint_url: <path:arn:aws:secretsmanager:us-east-1:435377327995:secret:fyre-dev/masdemo1/dro#dro_url>
+    dro_contact:
+      email: user@example.com
+      first_name: Joe
+      last_name: Blogs
+    dro_ca:
+      crt: |
+        -----BEGIN CERTIFICATE-----
+        MIIDDDCCAfSgAwIBAgIBATANBgkqhkiG9w0BAQsFADAmMSQwIgYDVQQDDBtpbmdy
+        ZXNzLW9wZXJhdG9yQDE3MDcxNDkwNjQwHhcNMjQwMjA1MTYwNDI0WhcNMjYwMjA0
+        MTYwNDI1WjAmMSQwIgYDVQQDDBtpbmdyZXNzLW9wZXJhdG9yQDE3MDcxNDkwNjQw
+        ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCpaz/JX2StBDEFopdBfalm
+        ee5zxlAaRTl5JAFa17iWMICpL9z3C8l22DcGahTHCkjzMexl8CtB4HM2cQHPiBnX
+        No7gmKwCHJ2MgRCf4KpMMS1DnpojDkuv2rQupIq4Y+Qt4DQ5e/TlV1BP24Oxm1d2
+        hfIb9AOMGa5S+erj3zK1MtlAbpXYivz4mFDsIpcZ0LVwBfQnHqbDV6+MSpfB3J5F
+        MOoOu//SxJ6tQqQpYBA7BGYKiULDxaV4C46mGJd73SOGZFIgHSM8kC+uAxO0PGGm
+        wF82dwxnwS1VLhYBNumSnPmBckeDkZ//H/xe6fp2XY9bi70P3nYtiC5/7azOrcp3
+        AgMBAAGjRTBDMA4GA1UdDwEB/wQEAwICpDASBgNVHRMBAf8ECDAGAQH/AgEAMB0G
+        A1UdDgQWBBQRhiasCu/kNg2H/2kPhgwAsHgVbTANBgkqhkiG9w0BAQsFAAOCAQEA
+        JSDcANsOFcfRyh/DGTftKLKLzjl6+YES91FMIHj+1M6nfxanoOXT/nF1FuhU1znU
+        oj96MUuJEiq0AKxNO69V0dvv3b6pit1jKghXqXXMe2NuV5AA6745uXDCQ9ksxM3Q
+        +YjAQXm6d425v1OWZHWyLc0qUQkvNPTFWp+TaILLDT33E8+HgdH4cMleQAim1twz
+        e0NhM9viZxwJ+skvt+m85PbDjZA8pwJoZJyJCO7XADys48fRK06ZKucoPG2eKOQ6
+        YTKza4jCTInEQU0NImVsOlDTD8KP0BYzzMOWc1mxWdI6I73LzIpExYgNT/C704eU
+        ZyOujzUQnmrI9k1AGALdmA==
+        -----END CERTIFICATE-----
   - mas_config_name: "inst1-mongo-system"
     mas_config_chart: ibm-mas-mongo-config
     mas_config_scope: system
